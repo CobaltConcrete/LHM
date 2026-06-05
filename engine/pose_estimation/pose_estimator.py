@@ -43,17 +43,47 @@ def normalize_rgb_tensor(img, imgenet_normalization=True):
 
 
 class PoseEstimator:
-    def __init__(self, model_path, device="cuda"):
+    def __init__(
+        self,
+        model_dir: str,
+        device: str = "cuda",
+        pose_model_path: str | None = None,
+    ):
+        """
+        Parameters
+        ----------
+        model_dir : str
+            Root directory for auxiliary model files (SMPL-X body model, etc.).
+            Typically ``./pretrained_models/human_model_files/``.
+        device : str
+            Torch device string, e.g. ``"cuda"`` or ``"cpu"``.
+        pose_model_path : str | None
+            Explicit path to the multiHMR ``.pt`` checkpoint.
+            When *None* (default), falls back to the canonical location:
+            ``<model_dir>/pose_estimate/multiHMR_896_L.pt``.
+        """
         self.device = torch.device(device)
+
+        # Resolve which checkpoint to load
+        if pose_model_path is None:
+            pose_model_path = os.path.join(
+                model_dir, "pose_estimate", "multiHMR_896_L.pt"
+            )
+
         self.mhmr_model = load_model(
-            os.path.join(model_path, "pose_estimate", "multiHMR_896_L.pt"),
-            model_path=model_path,
+            pose_model_path,
+            model_path=model_dir,
             device=self.device,
         )
         self.pad_ratio = 0.2
-        self.img_size = 896
+        # Read the resolution the model was trained at directly from the loaded
+        # checkpoint (stored as model.img_size by load_model).  This means
+        # multiHMR_672_* and multiHMR_1288_* variants work correctly without
+        # any manual changes here.  We keep 896 only as a safety fallback in
+        # case a custom checkpoint doesn't expose the attribute.
+        self.img_size = getattr(self.mhmr_model, "img_size", 896)
         self.fov = 60
-    
+
     def to(self, device):
         self.device = device
         self.mhmr_model.to(device)
@@ -148,6 +178,14 @@ class PoseEstimator:
                 idx=None,
                 max_dist=None,
             )
+        if len(target_human) >= 1:
+            print("target_human[0] keys:", list(target_human[0].keys()))
+            for k, v in target_human[0].items():
+                if isinstance(v, torch.Tensor):
+                    print(f"  {k}: shape={v.shape}")
+                else:
+                    print(f"  {k}: {type(v)} = {v}")
+
         if not len(target_human) == 1:
             return SMPLXOutput(
                 beta=None,
