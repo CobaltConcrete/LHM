@@ -1,0 +1,24 @@
+pose estimator model,pose estimator model memory,pose estimator model load time,face detector model,face detector model memory,face detector model load time,segmentation model,segmentation model memory,segmentation model load time,LHM model,LHM model memory,LHM model load time,source,driving,avatar build time,FPS,average pose extraction time,pose failure frames,total frames,percentage pose failures
+multiHMR_896_L,+1344 MB VRAM,4.6594s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.6935s,00000000_joker_2.jpg,mimo1.mp4,,8.5221,0.0924s,0,97,0.00%
+multiHMR_896_L,+1344 MB VRAM,4.7376s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,103.2629s,00000000_joker_2.jpg,mimo1.mp4,,8.5168,0.0925s,0,97,0.00%
+multiHMR_896_L,+1344 MB VRAM,4.7430s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.9146s,00000000_joker_2.jpg,0,,8.5599,0.0938s,50,260,19.23%
+multiHMR_896_L,+1344 MB VRAM,4.8896s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,15.8767s,00000000_joker_2.jpg,0,,8.0386,0.0962s,1,60,1.67%
+multiHMR_896_L,+1344 MB VRAM,4.5805s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.9810s,00000000_joker_2.jpg,0,,8.3939,0.0936s,64,539,11.87%
+multiHMR_896_L,+1344 MB VRAM,4.7167s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.4430s,00000000_joker_2.jpg,0,,10.2227,0.0863s,119,149,79.87%
+multiHMR_896_L,+1344 MB VRAM,4.5075s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,82.1753s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_896_L,+1344 MB VRAM,4.5292s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.4648s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_896_L,+1344 MB VRAM,4.6310s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,13.1944s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_896_L,+1344 MB VRAM,4.6258s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,13.0369s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_896_L,+1344 MB VRAM,4.5402s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,11.9859s,00000000_joker_2.jpg,0,,8.2347,0.0952s,124,785,15.80%
+multiHMR_896_L,+1344 MB VRAM,4.7348s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,16.5424s,00000000_joker_2.jpg,0,,8.0290,0.0958s,28,507,5.52%
+multiHMR_896_L,+1344 MB VRAM,4.8464s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,15.5080s,00000000_joker_2.jpg,0,,9.4934,0.0892s,172,297,57.91%
+multiHMR_896_L,+1344 MB VRAM,4.7745s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,16.4911s,00000000_joker_2.jpg,0,,7.5546,0.1006s,0,1412,0.00%
+multiHMR_672_L,+1344 MB VRAM,4.5810s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.6080s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_672_L,+1344 MB VRAM,4.6319s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.0068s,00000000_joker_2.jpg,0,,12.7190,0.0563s,130,668,19.46%
+multiHMR_672_B,+508 MB VRAM,2.3311s,,,,,,,HfModel (LHM-MINI),+7840 MB VRAM,17.7252s,00000000_joker_2.jpg,0,,14.9000,0.0385s,0,564,0.00%
+multiHMR_672_S,+253 MB VRAM,1.7797s,,,,,,,HfModel (LHM-MINI),+7839 MB VRAM,15.1109s,00000000_joker_2.jpg,0,,15.4298,0.0345s,0,608,0.00%
+multiHMR_672_S,+253 MB VRAM,1.7657s,,,,,,,HfModel (LHM-MINI),+7839 MB VRAM,11.8984s,00000000_joker_2.jpg,0,,15.9802,0.0334s,0,179,0.00%
+multiHMR_672_S,+253 MB VRAM,1.6838s,vgg_heads_l.trcd,+404 MB VRAM,0.6740s,SAM2,+1004 MB VRAM,1.9316s,HfModel (LHM-MINI),+7839 MB VRAM,14.3072s,0000_test.png,0,23.0675s,16.1059,0.0331s,0,477,0.00%
+multiHMR_672_S,+253 MB VRAM,1.7210s,vgg_heads_l.trcd,+404 MB VRAM,0.6944s,SAM2,+1004 MB VRAM,1.8648s,HfModel (LHM-MINI),+7839 MB VRAM,14.5976s,00000000_shigao.jpg,0,19.8008s,15.4253,0.0349s,0,1617,0.00%
+multiHMR_896_L,+1344 MB VRAM,4.6703s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.7352s,00000000_joker_2.jpg,0,,,,,,
+multiHMR_896_L,+1344 MB VRAM,4.6618s,,,,,,,HfModel (LHM-MINI),+7841 MB VRAM,12.5766s,00000000_joker_2.jpg,0,,8.9108,0.0907s,213,645,33.02%

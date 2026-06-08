@@ -58,6 +58,7 @@ exps/
 thirdparty/
 train_data/
 pretrained_models/
+devcontainer/
 
 debug_vis/
 pretrained_models

@@ -1,0 +1,33 @@
+# docker build -t lhm:cu121-torch230 -f Dockerfile.lhm .
+FROM base-cuda-torch:cu121-torch230
+
+WORKDIR /workspaces/LHM
+
+# ---------------- match working env build tools ----------------
+RUN pip install pip==26.1.1 setuptools==74.0.0 wheel==0.47.0
+
+# ---------------- core deps ----------------
+RUN pip install --no-build-isolation chumpy
+
+RUN pip uninstall -y basicsr || true && \
+    pip install git+https://github.com/XPixelGroup/BasicSR
+
+# ---------------- repo requirements ----------------
+COPY requirements.txt /workspaces/LHM/requirements.txt
+RUN pip install -r /workspaces/LHM/requirements.txt
+
+# ---------------- CUDA extensions ----------------
+ENV TORCH_CUDA_ARCH_LIST="8.6;8.9;9.0"
+ENV FORCE_CUDA=1
+
+RUN pip install --no-build-isolation \
+    git+https://github.com/facebookresearch/pytorch3d.git
+
+# sam2: pure Python, no CUDA extension
+RUN pip install git+https://github.com/hitsz-zuoqi/sam2/
+
+RUN pip install --no-build-isolation \
+    git+https://github.com/ashawkey/diff-gaussian-rasterization/
+
+RUN pip install --no-build-isolation \
+    git+https://github.com/camenduru/simple-knn/

@@ -1,32 +1,27 @@
 {
-  "name": "LHM (CUDA 12.1 build)",
+  "name": "LHM (CUDA 12.1)",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
   },
 
-  "remoteUser": "dev-user",
-  "containerUser": "dev-user",
+  "remoteUser": "root",
 
   "runArgs": [
-    "--device", "nvidia.com/gpu=all",
-    "--security-opt", "label=disable",
-    "--shm-size=16g"
+    "--gpus=all",
+    "--shm-size=16g",
+    "--security-opt=label=disable"
   ],
-
-  "containerEnv": {
-    "NVIDIA_VISIBLE_DEVICES": "all",
-    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics",
-    "CUDA_HOME": "/usr/local/cuda"
-  },
 
   "workspaceFolder": "/workspaces/LHM",
 
-  "mounts": [
-    "source=${localEnv:HOME}/.cache/huggingface,target=/home/dev-user/.cache/huggingface,type=bind"
-  ],
+  "containerEnv": {
+    "CUDA_HOME": "/usr/local/cuda",
+    "NVIDIA_VISIBLE_DEVICES": "all",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics"
+  },
 
-  "postCreateCommand": "bash -lc 'nvidia-smi && nvcc --version && pip install -U pip'",
+  "postCreateCommand": "nvcc --version && python -c 'import torch; print(torch.cuda.is_available())'",
 
   "customizations": {
     "vscode": {

@@ -1,0 +1,1825 @@
+
+═══════════════════════════════════════════════
+VIDEO SUMMARY
+═══════════════════════════════════════════════
+Video length             : 5.97 s
+Frames processed         : 179
+Average output FPS       : 15.98
+
+Average pose extraction  : 0.0334 s/frame
+
+Pose failures            : 0 / 179 (0.00%)
+═══════════════════════════════════════════════
+
+
+
+════════════════════════════════════════════════════════════════════════════════════════
+                                        RUN LOG                                       
+════════════════════════════════════════════════════════════════════════════════════════
+  downloads / prior check                                          0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  model load | pose estimator [multiHMR_672_S]  (+253 MB VRAM)     1.766s  [█░░░░░░░░░░░░░░░░░░░]   3.0%
+  model load | LHM [HfModel (LHM-MINI)]  (+7839 MB VRAM)          11.898s  [██████████░░░░░░░░░░]  20.4%
+  avatar  | load from cache                                        0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.336s  [░░░░░░░░░░░░░░░░░░░░]   0.6%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.366s  [░░░░░░░░░░░░░░░░░░░░]   0.6%
+  render  | apply driving pose to avatar (animation_infer)         0.089s  [░░░░░░░░░░░░░░░░░░░░]   0.2%
+  output  | composite frame                                        0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00000 | write to video                                     0.009s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00001 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00002 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00003 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.043s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00004 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00005 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00006 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00007 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00008 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00009 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00010 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00011 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00012 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00013 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00014 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00015 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00016 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00017 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00018 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00019 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00020 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00021 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00022 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00023 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00024 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.016s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00025 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00026 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00027 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00028 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00029 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00030 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00031 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00032 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00033 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00034 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00035 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00036 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00037 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00038 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00039 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00040 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00041 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00042 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00043 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00044 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00045 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00046 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00047 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00048 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.017s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00049 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00050 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00051 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00052 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00053 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00054 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00055 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00056 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00057 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00058 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.038s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.046s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00059 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00060 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00061 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00062 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00063 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00064 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00065 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00066 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00067 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.040s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00068 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00069 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.005s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00070 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00071 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00072 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00073 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00074 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00075 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00076 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.005s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00077 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00078 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00079 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00080 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00081 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00082 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00083 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00084 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00085 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00086 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00087 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00088 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00089 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00090 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00091 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00092 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00093 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00094 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00095 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00096 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00097 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.038s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00098 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00099 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00100 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00101 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00102 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00103 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00104 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00105 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00106 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00107 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00108 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00109 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00110 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00111 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00112 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00113 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00114 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00115 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00116 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00117 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00118 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00119 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00120 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00121 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00122 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00123 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00124 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00125 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00126 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00127 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00128 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00129 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00130 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00131 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00132 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00133 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00134 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00135 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00136 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00137 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00138 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00139 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00140 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00141 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.018s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00142 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.026s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00143 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00144 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00145 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.025s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00146 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.005s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.039s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00147 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.031s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.038s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00148 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00149 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00150 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00151 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00152 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.022s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00153 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00154 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00155 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00156 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00157 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00158 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00159 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00160 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00161 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00162 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00163 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.035s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00164 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00165 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00166 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.005s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.032s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.041s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00167 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00168 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00169 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00170 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00171 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.005s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.030s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.038s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.024s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00172 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.037s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.023s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00173 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00174 | write to video                                     0.003s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.020s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00175 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.033s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.021s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00176 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.028s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00177 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.029s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.036s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.019s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  output  | composite frame                                        0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  frame 00178 | write to video                                     0.002s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | load + pad image                                       0.004s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | camera intrinsics                                      0.000s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | crop + resize for multiHMR                             0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | multiHMR forward pass (pose extraction)                0.027s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | unpack smplx params + pack tensors                     0.001s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  driving | TOTAL (pose extraction)                                0.034s  [░░░░░░░░░░░░░░░░░░░░]   0.1%
+  render  | apply driving pose to avatar (animation_infer)         0.015s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  render  | apply driving pose to avatar (animation_infer)         0.015s  [░░░░░░░░░░░░░░░░░░░░]   0.0%
+  ── WALL CLOCK TOTAL ──                                          27.410s  [███████████████████████]  47.0%
+────────────────────────────────────────────────────────────────────────────────────────
+  TOTAL                                                           58.302s
+════════════════════════════════════════════════════════════════════════════════════════
+
