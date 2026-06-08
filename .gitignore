@@ -59,6 +59,7 @@ thirdparty/
 train_data/
 pretrained_models/
 devcontainer/
+outputs/
 
 debug_vis/
 pretrained_models
