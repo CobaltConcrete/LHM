@@ -23,7 +23,7 @@ python inference.py \
     [--save-avatar true|false]
     [--pose-estimator-model PATH]
 
-eg: python inference_videostream3.py --source ./train_data/example_imgs/00000000_joker_2.jpg --driving ./train_data/example_vids/mimo1.mp4 --output --log --pose-estimator-model ./pretrained_models/human_model_files/pose_estimate/multiHMR_896_L.pt
+eg: python inference_videostream3.py --source ./train_data/example_imgs/00000000_joker_2.jpg --driving 0 --output --log --pose-estimator-model ./pretrained_models/human_model_files/pose_estimate/multiHMR_896_L.pt --stream
 """
 
 import argparse
@@ -40,6 +40,10 @@ PartialState()
 import cv2
 import numpy as np
 import torch
+torch.backends.cudnn.enabled = False
+torch.backends.cudnn.benchmark = False
+torch.backends.cuda.matmul.allow_tf32 = False
+torch.backends.cudnn.allow_tf32 = False
 from PIL import Image
 from omegaconf import OmegaConf
 
@@ -682,6 +686,9 @@ def _build_model(cfg):
 # Avatar builder  (source image only — runs once before any driving frames)
 # ══════════════════════════════════════════════════════════════════════════════
 
+import torch._dynamo
+torch._dynamo.config.suppress_errors = True
+
 def _build_avatar(
     source_path:   str,
     lhm,
@@ -750,7 +757,6 @@ def _build_avatar(
 
     return gs_model_list, query_points, transform_mat_neutral_pose, src_betas
 
-
 # ══════════════════════════════════════════════════════════════════════════════
 # Per-frame renderer
 # ══════════════════════════════════════════════════════════════════════════════
@@ -768,6 +774,7 @@ def _render_frame(
     device:                     str,
     bg_mode:                    str,
     log:                        Logger,
+    last_pose:                  list,
 ) -> np.ndarray:
     """
     Given a single driving frame (as a BGR numpy array), extract pose and
@@ -787,12 +794,15 @@ def _render_frame(
     log.stamp("driving | TOTAL (pose extraction)", pose_time)
 
     if pose_result is None:
-        # No person detected — return the original driving frame unchanged
-        return (
-            cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB),
-            pose_time,
-            False,
-        )
+        if last_pose[0] is None:
+            print("[warn] No pose available yet — returning blank frame.")
+            blank = np.ones_like(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)) * 255  # white
+            return (blank.astype(np.uint8), pose_time, False)
+        else:
+            print("[warn] Pose failed — reusing last known pose.")
+            pose_result = last_pose[0]
+    else:
+        last_pose[0] = pose_result
 
     smplx_params, render_c2ws, render_intrs, render_bg_colors = pose_result
 
@@ -1166,33 +1176,45 @@ def run(
     }
 
     # ── 6. Build or load avatar (source only — once) ─────────────────────────
+    torch.cuda.empty_cache()
+    import gc; gc.collect()
+
+    import traceback
+
     if use_cached_avatar:
         with log.tick("avatar  | load from cache"):
             gs_model_list, query_points, transform_mat_neutral_pose, src_betas = \
                 _load_avatar(source_path, device)
     else:
-        gs_model_list, query_points, transform_mat_neutral_pose, src_betas = _build_avatar(
-            source_path    = source_path,
-            lhm            = lhm,
-            pose_estimator = pose_estimator,
-            face_detector  = face_detector,
-            parsing_net    = parsing_net,
-            source_size    = source_size,
-            src_head_size  = src_head_size,
-            dtype          = dtype,
-            device         = device,
-            log            = log,
-            render_c2ws      = neutral_c2w,
-            render_intrs     = neutral_intr,
-            render_bg_colors = neutral_bg,
-            smplx_params_ref = neutral_smplx,
-        )
-        if save_avatar:
-            with log.tick("avatar  | save to cache"):
-                _save_avatar(
-                    source_path, gs_model_list, query_points,
-                    transform_mat_neutral_pose, src_betas,
-                )
+        try:
+            gs_model_list, query_points, transform_mat_neutral_pose, src_betas = _build_avatar(
+                source_path    = source_path,
+                lhm            = lhm,
+                pose_estimator = pose_estimator,
+                face_detector  = face_detector,
+                parsing_net    = parsing_net,
+                source_size    = source_size,
+                src_head_size  = src_head_size,
+                dtype          = dtype,
+                device         = device,
+                log            = log,
+                render_c2ws      = neutral_c2w,
+                render_intrs     = neutral_intr,
+                render_bg_colors = neutral_bg,
+                smplx_params_ref = neutral_smplx,
+            )
+            if save_avatar:
+                with log.tick("avatar  | save to cache"):
+                    _save_avatar(
+                        source_path, gs_model_list, query_points,
+                        transform_mat_neutral_pose, src_betas,
+                    )
+        except Exception as e:
+            traceback.print_exc()
+            raise
+
+    torch.cuda.empty_cache()
+    import gc; gc.collect()
 
     # ── 7. Single-image mode ──────────────────────────────────────────────────
     if is_image:
@@ -1202,7 +1224,7 @@ def run(
         output_img, pose_time, pose_success = _render_frame(
             frame_bgr, tmp_path, lhm, pose_estimator,
             gs_model_list, query_points, transform_mat_neutral_pose,
-            src_betas, dtype, device, bg_mode, log,
+            src_betas, dtype, device, bg_mode, log, [None],
         )
 
         if output_path is not None:
@@ -1217,9 +1239,14 @@ def run(
     else:
         import tempfile
 
-        cap = cv2.VideoCapture(driving_cv)
-        if not cap.isOpened():
-            raise RuntimeError(f"Cannot open driving source: {driving!r}")
+        if isinstance(driving_cv, int):
+            cap = cv2.VideoCapture(driving_cv, cv2.CAP_V4L2)
+            cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"MJPG"))
+            cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+            cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+            cap.set(cv2.CAP_PROP_FPS, 30)
+        else:
+            cap = cv2.VideoCapture(driving_cv)  # file path or RTSP URL — unchanged
 
         fps    = cap.get(cv2.CAP_PROP_FPS) or 30.0
         fw     = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -1268,6 +1295,9 @@ def run(
         tmp_fd, tmp_path = tempfile.mkstemp(suffix=".png")
         os.close(tmp_fd)
 
+        # cache of last_pose for failed pose extractions
+        last_pose = [None]
+
         print(f"[info] Starting video loop {'(stream)' if is_stream else f'({total} frames)'} …")
         try:
             while True:
@@ -1285,7 +1315,7 @@ def run(
                     output_img, pose_time, pose_success = _render_frame(
                         frame_bgr, tmp_path, lhm, pose_estimator,
                         gs_model_list, query_points, transform_mat_neutral_pose,
-                        src_betas, dtype, device, bg_mode, log,
+                        src_betas, dtype, device, bg_mode, log, last_pose,
                     )
 
                 # Lazy VideoWriter init (size known after first render)
