@@ -17,13 +17,14 @@ python inference.py \
     --output  ./outputs/ \
     [--model_name LHM-1B] \
     [--bg white|driving] \
-    [--device cuda] \
+    [-model-device cuda] \
     [--log]
     [--stream [mjpeg|window|rtsp]]
     [--save-avatar true|false]
     [--pose-estimator-model PATH]
 
-eg: python inference_videostream3.py --source ./train_data/example_imgs/00000000_joker_2.jpg --driving 0 --output --log --pose-estimator-model ./pretrained_models/human_model_files/pose_estimate/multiHMR_896_L.pt --stream
+eg: 
+python inference_videostream4.py --source ./train_data/example_imgs/00000000_joker_2.jpg --driving 0 --output --log --pose-estimator-model ./pretrained_models/human_model_files/pose_estimate/multiHMR_896_L.pt --stream
 """
 
 import argparse
@@ -40,10 +41,10 @@ PartialState()
 import cv2
 import numpy as np
 import torch
-torch.backends.cudnn.enabled = False
-torch.backends.cudnn.benchmark = False
-torch.backends.cuda.matmul.allow_tf32 = False
-torch.backends.cudnn.allow_tf32 = False
+# torch.backends.cudnn.enabled = False
+# torch.backends.cudnn.benchmark = False
+# torch.backends.cuda.matmul.allow_tf32 = False
+# torch.backends.cudnn.allow_tf32 = False
 from PIL import Image
 from omegaconf import OmegaConf
 
@@ -1176,8 +1177,8 @@ def run(
     }
 
     # ── 6. Build or load avatar (source only — once) ─────────────────────────
-    torch.cuda.empty_cache()
-    import gc; gc.collect()
+    # torch.cuda.empty_cache()
+    # import gc; gc.collect()
 
     import traceback
 
@@ -1213,8 +1214,8 @@ def run(
             traceback.print_exc()
             raise
 
-    torch.cuda.empty_cache()
-    import gc; gc.collect()
+    # torch.cuda.empty_cache()
+    # import gc; gc.collect()
 
     # ── 7. Single-image mode ──────────────────────────────────────────────────
     if is_image:
@@ -1577,11 +1578,17 @@ def main():
             "Pass a valid path via --pose-estimator-model."
         )
 
-    # Stems used in auto-naming
+    # ── Resolve actual model name (may be auto-switched to MINI) ─────────────
+    switcher   = AutoModelSwitcher(MEMORY_MODEL_CARD, extra_memory=0)
+    resolved_model_name = switcher.query(args.model_name)
+    if resolved_model_name != args.model_name:
+        print(f"[info] Model auto-switched: {args.model_name} → {resolved_model_name}")
+
+    # ── Stems used in auto-naming ─────────────────────────────────────────────
     src_stem       = os.path.splitext(os.path.basename(args.source))[0]
     drv_stem       = os.path.splitext(os.path.basename(args.driving))[0]
-    lhm_stem       = args.model_name                                     # e.g. "LHM-1B"
-    pose_stem      = _pose_model_stem(args.pose_model_path)              # e.g. "multiHMR_896_L"
+    lhm_stem       = resolved_model_name
+    pose_stem      = _pose_model_stem(args.pose_model_path) # e.g. "multiHMR_896_L"
     _IMAGE_EXTS    = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".tiff"}
     drv_ext        = os.path.splitext(args.driving)[-1].lower()
     is_image_drive = drv_ext in _IMAGE_EXTS and os.path.isfile(args.driving)
@@ -1618,7 +1625,7 @@ def main():
         source_path      = args.source,
         driving          = args.driving,
         output_path      = args.output,
-        model_name       = args.model_name,
+        model_name       = resolved_model_name,
         bg_mode          = args.bg,
         device           = args.device,
         log_path         = log_path,

@@ -285,6 +285,25 @@ We have implemented a standard workflow and related nodes for customlize video a
 ## Contribute Needed
 We need a comfyui windows install guide of our feat/comfyui branch. If you are familiar with comfyui and successfully install it on windows, welcome to submit a pr to update windows install guide for our community!
 
+## Info
+powershell
+```powershell
+usbipd list
+usbipd bind --busid 1-5
+usbipd attach --wsl --busid 1-5
+```
+linux
+```linux
+ls /dev/video*
+```
+
+Kill port
+bash
+```bash
+netstat -ano | findstr :8080
+taskkill /PID 12345 /F
+```
+
 ## Acknowledgement
 This work is built on many amazing research works and open-source projects:
 - [OpenLRM](https://github.com/3DTopia/OpenLRM)
